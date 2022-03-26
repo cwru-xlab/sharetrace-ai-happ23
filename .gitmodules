@@ -1,0 +1,3 @@
+[submodule "contact-tracing"]
+	path = contact-tracing
+	url = https://github.com/share-trace/contact-tracing
