@@ -139,7 +139,7 @@
 \begin{column}{\colwidth}
 	\begin{block}{4. Experimental Design}
 		\begin{itemize}
-			\item Synthetic graphs included random geometric graphs (RGG) \cite{Dall2002}, benchmark graphs (LFRG) \cite{Lancichinetti2008}, and clustered scale-free graphs. (CSFG) \cite{Holme2002}. See Figure \ref{fig:sociopatterns} regarding real-world graphs.
+			\item Synthetic graphs included random geometric graphs (RGG) \cite{Dall2002}, benchmark graphs (LFRG) \cite{Lancichinetti2008}, and clustered scale-free graphs (CSFG) \cite{Holme2002}. See Figure \ref{fig:sociopatterns} regarding real-world graphs.
 			\item METIS was used to partition the graphs with a load imbalance factor of 0.2 and set to attempt contiguous partitions and minimize the connectivity between partitions \cite{Karypis1998}.
 			\item Users were assigned ``high'' risk (scores above 0.5) with probability 0.2, and ``low'' risk otherwise.
 			\item Default parameter values: transmission rate $\alpha = 0.8$; send tolerance $\gamma = 0.6$.
@@ -160,7 +160,7 @@
 	\begin{block}{5. Efficiency Results}
 		\begin{itemize}
 			\item We evaluated the effects of transmission rate and send tolerance on risk propagation efficiency using synthetic graphs with 5,000 users and 2 actors.
-			\item A send tolerance of $\gamma = 0.6$ optimizes for completeness and efficiency by permitting 99\% of the possible user updates, while resulting in faster runtimes, $(Q_{25}, Q_{50}, Q_{75}) = (0.13, 0.13, 0.46)$, and fewer messages, $(Q_{25}, Q_{50}, Q_{75}) = (0.13, 0.15, 0.44)$, for a transmission rate of $\alpha = 0.8$.
+			\item A send tolerance of $\gamma = 0.6$ optimizes for completeness and efficiency by permitting 99\% of the possible user updates, while resulting in faster runtimes, $(Q_1, Q_2, Q_3) = (0.13, 0.13, 0.46)$, and fewer messages, $(Q_1, Q_2, Q_3) = (0.13, 0.15, 0.44)$, for a transmission rate of $\alpha = 0.8$.
 		\end{itemize}
 		\begin{figure}
 			\centering
