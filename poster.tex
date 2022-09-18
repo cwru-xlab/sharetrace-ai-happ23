@@ -97,7 +97,7 @@
 					$\implies$
 					\matrix[row sep=4em, column sep=2em] at (6, 0)
 					{%
-						\node[latent, label=below:$v_1$, minimum size=1em] (v1) {}; \& 
+						\node[latent, label=below:$v_1$, minimum size=1em] (v1) {}; \&
 						\& \node[latent, label=below:$v_3$, minimum size=1em] (v3) {}; \\
 						\& \node[latent, label=below:$v_2$, minimum size=1em] (v2) {}; \& \\
 					};
@@ -105,11 +105,11 @@
 					\factor[minimum size=0.5em, above= of v2, xshift=-1.5em] {f122} {above:$f(v_1, v_2)$} {} {};
 					\factor[minimum size=0.5em, above= of v2, xshift=1.5em] {f232} {above:$f(v_2, v_3)$} {} {};
 					\factor[minimum size=0.5em, above= of v3] {f233} {above:$f(v_2, v_3)$} {} {};
-					
+
 					\plate{p1} {(v1)(f121)(f121-caption)} {$u_1$};
 					\plate{p2} {(v2)(f122)(f232)(f122-caption)(f232-caption)} {$u_2$};
 					\plate{p3} {(v3)(f233)(f233-caption)} {$u_3$};
-					
+
 					\edge[-] {v1} {f121};
 					\edge[-] {v2} {f122};
 					\edge[-] {v2} {f232};
@@ -148,11 +148,11 @@
 	    \begin{figure}
 	    	\centering
 	    	\subfloat[High school (Thiers13): 180 / 2,220]
-	    		{\includegraphics[width=0.3\columnwidth]{contact-tracing/evaluation/figures/highschool12}} \qquad
+	    		{\includegraphics[width=0.3\columnwidth]{anc/highschool12}} \qquad
 			\subfloat[Workplace (InVS15): 217 / 4,274]
-				{\includegraphics[width=0.3\columnwidth]{contact-tracing/evaluation/figures/workplace}} \qquad
+				{\includegraphics[width=0.3\columnwidth]{anc/workplace}} \qquad
 			\subfloat[Scientific conf. (SFHH): 403 / 9,565]
-				{\includegraphics[width=0.3\columnwidth]{contact-tracing/evaluation/figures/conference}}
+				{\includegraphics[width=0.3\columnwidth]{anc/conference}}
 			\caption{SocioPatterns contact graphs (number of users / number of contacts) \cite{Genois2018}. Each edge represents the most recent time of contact (duration of at least 20 seconds) between two users.}
 			\label{fig:sociopatterns}
 		\end{figure}
@@ -174,7 +174,7 @@
 					},
 					boxplot,
 					table/col sep=comma,
-					boxplot/draw direction=y, 
+					boxplot/draw direction=y,
 					scaled x ticks={base 10:-1},
 					width=0.3\columnwidth,
 					height=0.3\columnwidth,
@@ -185,17 +185,17 @@
 					\nextgroupplot[table/y=NormalizedUpdates, title={Normalized updates}]
 						\foreach \t in {1,...,10} {%
 							\addplot[color=black] table[only if={entry of SendTolerance is \t}]
-							{contact-tracing/evaluation/figures/tolerance-updates.csv};
+							{anc/tolerance-updates.csv};
 						}%
 					\nextgroupplot[table/y=NormalizedRuntimeInSeconds, title={Normalized runtime}]
 						\foreach \t in {1,...,10} {%
 							\addplot[color=black] table[only if={entry of SendTolerance is \t}]
-							{contact-tracing/evaluation/figures/tolerance-runtime.csv};
+							{anc/tolerance-runtime.csv};
 						}%
 						\nextgroupplot[table/y=NormalizedMessages, title={Normalized messages}]
 						\foreach \t in {1,...,10} {%
 							\addplot[color=black] table[only if={entry of SendTolerance is \t}]
-							{contact-tracing/evaluation/figures/tolerance-messages.csv};
+							{anc/tolerance-messages.csv};
 						}%
 					\end{groupplot}
 				\end{tikzpicture}
@@ -224,7 +224,7 @@
 							boxplot,
 							title={A/E MRR, $\reach / \estreach$},
 							table/col sep=comma,
-							boxplot/draw direction=y,    
+							boxplot/draw direction=y,
 							xtick distance=2,
 							scaled x ticks={base 10:-1},
 							xtick scale label code/.code={},
@@ -235,12 +235,12 @@
 							\nextgroupplot[table/y=RatioValue, xlabel={Send tolerance, $\gamma$}]
 							\foreach \t in {1,...,10} {%
 								\addplot[color=black] table[only if={entry of SendTolerance is \t}]
-								{contact-tracing/evaluation/figures/ratio-tolerance.csv};
+								{anc/ratio-tolerance.csv};
 							}%
 							\nextgroupplot[table/y=RatioValue, xlabel={Transmission rate, $\alpha$},]
 							\foreach \t in {1,...,9} {%
 								\addplot[color=black] table[only if={entry of Transmission is \t}]
-								{contact-tracing/evaluation/figures/ratio-transmission.csv};
+								{anc/ratio-transmission.csv};
 							}%
 						\end{groupplot}
 					\end{tikzpicture}
@@ -298,7 +298,7 @@
 						mark size=3pt
 					]
 					table [col sep=comma,x=Edges,y=RuntimeInSeconds,meta=Graph]
-					{contact-tracing/evaluation/figures/scalability.csv};
+					{anc/scalability.csv};
 					\legend{LFRG,CSFG,RGG}
 				\end{axis}
 			\end{tikzpicture}
