@@ -1,4 +1,5 @@
-# chil22-poster
-Poster for the CHIL 2022 Conference
+# sharetrace-ai-happ23
 
-![Imgur Image](https://github.com/share-trace/chil22-poster/blob/main/poster.png)
+Poster for the AI-HAPP 2023 Conference
+
+![Imgur Image](https://github.com/cwru-xlab/sharetrace-ai-happ23/blob/main/poster.png)
